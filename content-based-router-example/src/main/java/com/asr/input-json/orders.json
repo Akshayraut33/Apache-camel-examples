@@ -1,0 +1,22 @@
+{
+  "orders": [
+    {
+      "orderId": 101,
+      "category": "electronics",
+      "item": "Laptop",
+      "amount": 55000
+    },
+    {
+      "orderId": 102,
+      "category": "grocery",
+      "item": "Rice Bag",
+      "amount": 1200
+    },
+    {
+      "orderId": 103,
+      "category": "fashion",
+      "item": "T-Shirt",
+      "amount": 800
+    }
+  ]
+}
