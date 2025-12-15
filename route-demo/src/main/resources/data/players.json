@@ -1,0 +1,20 @@
+{
+  "teamName": "Camel FC",
+  "players": [
+    {
+      "id": 1,
+      "name": "Lionel Messi",
+      "position": "Forward"
+    },
+    {
+      "id": 2,
+      "name": "Cristiano Ronaldo",
+      "position": "Forward"
+    },
+    {
+      "id": 3,
+      "name": "Kylian Mbappe",
+      "position": "Forward"
+    }
+  ]
+}

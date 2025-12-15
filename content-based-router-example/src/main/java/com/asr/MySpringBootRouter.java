@@ -38,3 +38,7 @@ public class MySpringBootRouter extends RouteBuilder {
     }
 
 }
+
+
+mvn archetype:generate -DarchetypeGroupId=org.apache.camel.archetypes -DarchetypeArtifactId=camel-archetype-spring-boot -DarchetypeVersion=3.22.4 -DgroupId=com.asr -DartifactId=route-demo -Dversion=1.0.0-SNAPSHOT -DinteractiveMode=false
+
