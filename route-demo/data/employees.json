@@ -1,0 +1,30 @@
+[
+  {
+    "id": 101,
+    "name": "Akshay Sanjay Raut",
+    "department": "IT",
+    "designation": "Software Engineer",
+    "salary": 55000
+  },
+  {
+    "id": 102,
+    "name": "Rahul Patil",
+    "department": "HR",
+    "designation": "HR Executive",
+    "salary": 42000
+  },
+  {
+    "id": 103,
+    "name": "Sneha Kulkarni",
+    "department": "Finance",
+    "designation": "Accountant",
+    "salary": 48000
+  },
+  {
+    "id": 104,
+    "name": "Amit Deshmukh",
+    "department": "Operations",
+    "designation": "Operations Manager",
+    "salary": 60000
+  }
+]
