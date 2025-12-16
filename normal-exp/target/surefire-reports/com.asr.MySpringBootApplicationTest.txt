@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.asr.MySpringBootApplicationTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 8.935 s <<< FAILURE! - in com.asr.MySpringBootApplicationTest
+com.asr.MySpringBootApplicationTest.test  Time elapsed: 1.397 s  <<< ERROR!
+java.lang.IllegalArgumentException: Cannot advice route as route with id: hello does not exists
+	at com.asr.MySpringBootApplicationTest.test(MySpringBootApplicationTest.java:27)
+

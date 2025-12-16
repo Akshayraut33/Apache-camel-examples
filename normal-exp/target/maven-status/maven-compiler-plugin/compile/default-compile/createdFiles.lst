@@ -1,0 +1,5 @@
+com\asr\MySpringBootApplication.class
+com\asr\MySpringBean.class
+com\asr\route\PlayerRoute.class
+com\asr\MySpringBootRouter$1.class
+com\asr\MySpringBootRouter.class

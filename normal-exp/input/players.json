@@ -1,0 +1,8 @@
+{
+  "players": [
+    { "name": "Rohit Sharma", "team": "MI" },
+    { "name": "MS Dhoni", "team": "CSK" },
+    { "name": "Virat Kohli", "team": "RCB" }
+  ]
+}
+

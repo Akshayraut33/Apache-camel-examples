@@ -6,39 +6,37 @@ import org.springframework.stereotype.Component;
 @Component
 public class PlayerRoute extends RouteBuilder {
 
+    // 1. Define a unique endpoint URI for the REST service to route to
+    private static final String PROCESS_PLAYERS_URI = "direct:process-players-file";
+
     @Override
     public void configure() throws Exception {
 
-        // 1. Configure the REST endpoint to use the platform-http component
-        // (which uses the embedded Spring Boot server)
+        // --- PART A: REST DEFINITION (Only defines the HTTP endpoint) ---
         restConfiguration()
                 .component("platform-http")
                 .port(8080)
                 .bindingMode(org.apache.camel.model.rest.RestBindingMode.json);
 
-        //
-
-        // 2. Define the REST service
         rest("/api/v1")
                 .get("/players/names")
-                .produces("application/json") // Define the response content type
-                .route()
-                // A. Read the JSON file content into the message body
-                .to("file:src/main/resources/data/?fileName=players.json&noop=true")
-                // `noop=true` prevents the file from being moved/deleted after reading
+                .produces("application/json")
+                // CRITICAL FIX: Route the REST call directly to a 'direct:' endpoint
+                .to(PROCESS_PLAYERS_URI);
 
-                // B. Use JSONPath to extract only the 'name' field from the 'players' array
-                // $..name is a recursive descent operator that selects the value of all 'name'
-                // fields
+        // --- PART B: ROUTE LOGIC (The actual work starts here) ---
+        // Start a completely separate route from the 'direct' endpoint defined above
+        from(PROCESS_PLAYERS_URI)
+                .routeId("PlayersFileReader") // It's good practice to name your routes
+
+                // 1. Read the JSON file content into the message body
+                .to("file:src/main/resources/data/?fileName=players.json&noop=true")
+
+                // 2. Use JSONPath to extract only the 'name' field from the 'players' array
                 .transform().jsonpath("$..name")
 
-                // C. Log the result
-                .log("Successfully extracted player names: ${body}")
-
-                // D. The final body (a List of Strings) is automatically marshalled to a JSON
-                // array
-                // thanks to the 'produces("application/json")' and
-                // 'bindingMode(RestBindingMode.json)'
-                .endRest();
+                // 3. Log the result
+                .log("Successfully extracted player names: ${body}");
+        // The final body (a List of Strings) is returned as the HTTP response
     }
 }
