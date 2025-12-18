@@ -1,0 +1,15 @@
+{
+  "players": [
+    { "name": "Rohit Sharma", "runs": 450 },
+    { "name": "Virat Kohli", "runs": 780 },
+    { "name": "MS Dhoni", "runs": 560 },
+    { "name": "Shubman Gill", "runs": 900 },
+    { "name": "Suryakumar Yadav", "runs": 300 },
+    { "name": "Shreyas Iyer", "runs": 620 },
+    { "name": "KL Rahul", "runs": 510 },
+    { "name": "Rishabh Pant", "runs": 470 },
+    { "name": "Hardik Pandya", "runs": 390 },
+    { "name": "Jasprit Bumrah", "runs": 150 }
+  ]
+}
+

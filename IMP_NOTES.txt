@@ -4,7 +4,5 @@ mvn archetype:generate -DarchetypeGroupId=org.apache.camel.archetypes -Darchetyp
     3-cd folder
 4-run mvn spring-boot:run
 
-mvn archetype:generate -DarchetypeGroupId=org.apache.camel.archetypes 
--DarchetypeArtifactId=camel-archetype-spring-boot -DarchetypeVersion=3.22.4
- -DgroupId=com.asr -DartifactId=cbr-with-sorting -Dversion=1.0.0-SNAPSHOT 
+mvn archetype:generate -DarchetypeGroupId=org.apache.camel.archetypes -DarchetypeArtifactId=camel-archetype-spring-boot -DarchetypeVersion=3.22.4-DgroupId=com.asr -DartifactId=cbr-with-sorting -Dversion=1.0.0-SNAPSHOT 
 -DinteractiveMode=false
