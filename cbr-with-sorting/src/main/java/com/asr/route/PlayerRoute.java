@@ -20,7 +20,7 @@ public class PlayerRoute extends RouteBuilder {
                 // ✅ Convert JSON String → Map
                 .unmarshal().json(JsonLibrary.Jackson)
 
-                .log("After unmarshal body type: ${body.getClass}")
+                .log("After unmarshal body type is --: ${body.getClass}")
                 .log("Unmarshalled JSON: ${body}")
 
                 // ✅ Now processor will work
